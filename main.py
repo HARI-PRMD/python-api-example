@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
     return jsonify({ "data": "Hello SENG2021" }), 200
 
+@app.route("/greeting")
+def greeting():
+    return jsonify({ "data": "Good Afternoon SENG2021" }), 200
+
 @app.route("/slow")
 def slow():
     delay = 2
