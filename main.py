@@ -18,7 +18,7 @@ def slow():
             print("error converting delay to int")
 
     sleep(delay)
-    return jsonify({ "data": "So Slow, {delay} seconds Slow" }), 200
+    return jsonify({ "data": f"So Slow, {delay} seconds Slow" }), 200
 
 if __name__ == "__main__":
     app.run(debug=True, port=int(os.getenv("PORT", default=5000)))
